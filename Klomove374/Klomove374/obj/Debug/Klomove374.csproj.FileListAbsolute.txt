@@ -35,5 +35,5 @@ D:\TRPO\2\Klomove374\Klomove374\obj\Debug\Klomove374.csproj.GenerateResource.cac
 D:\TRPO\2\Klomove374\Klomove374\obj\Debug\Klomove374.exe
 D:\TRPO\2\Klomove374\Klomove374\obj\Debug\Klomove374.pdb
 D:\TRPO\2\Klomove374\Klomove374\bin\Debug\contract_work.mdb
-D:\TRPO\2\Klomove374\Klomove374\bin\Debug\группа 374 Климов Иван contract_work.mdb
 D:\TRPO\2\Klomove374\Klomove374\obj\Debug\Klomove374.ProfilSupervaser2.resources
+D:\TRPO\2\Klomove374\Klomove374\obj\Debug\Klomove374.Panel_redact.resources

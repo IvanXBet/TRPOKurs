@@ -34,7 +34,7 @@ namespace Klomove374
             // открываем соединение с БД
             myConnection.Open();
         }
-
+        // 1 46 
         private OleDbConnection myConnection;
 
         private void Form1_Load(object sender, EventArgs e)

@@ -53,16 +53,30 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="contract_workDataSet.cs">
+      <DependentUpon>contract_workDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="contract_workDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>contract_workDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="contract_workDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>contract_workDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_redact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel_redact.Designer.cs">
+      <DependentUpon>Panel_redact.cs</DependentUpon>
     </Compile>
     <Compile Include="Profil.cs">
       <SubType>Form</SubType>
@@ -95,6 +109,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel_redact.resx">
+      <DependentUpon>Panel_redact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profil.resx">
       <DependentUpon>Profil.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +142,17 @@
     <None Include="contract_workDataSet.xss">
       <DependentUpon>contract_workDataSet.xsd</DependentUpon>
     </None>
+    <None Include="contract_workDataSet1.xsc">
+      <DependentUpon>contract_workDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="contract_workDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>contract_workDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="contract_workDataSet1.xss">
+      <DependentUpon>contract_workDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,9 +181,7 @@
     <Content Include="contract_work.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="группа 374 Климов Иван contract_work.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="группа 374 Климов Иван contract_work.mdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

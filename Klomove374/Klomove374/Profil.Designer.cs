@@ -48,6 +48,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.Line = new System.Windows.Forms.Label();
             this.comboBoxLiberProject = new System.Windows.Forms.ComboBox();
+            this.done = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -244,6 +245,7 @@
             this.buttonAdd.TabIndex = 18;
             this.buttonAdd.Text = "Записаться на проект";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // Line
             // 
@@ -257,17 +259,25 @@
             // 
             this.comboBoxLiberProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLiberProject.FormattingEnabled = true;
-            this.comboBoxLiberProject.Location = new System.Drawing.Point(50, 387);
+            this.comboBoxLiberProject.Location = new System.Drawing.Point(50, 385);
             this.comboBoxLiberProject.Name = "comboBoxLiberProject";
             this.comboBoxLiberProject.Size = new System.Drawing.Size(193, 21);
             this.comboBoxLiberProject.TabIndex = 20;
             // 
+            // done
+            // 
+            this.done.AutoSize = true;
+            this.done.Location = new System.Drawing.Point(268, 393);
+            this.done.Name = "done";
+            this.done.Size = new System.Drawing.Size(0, 13);
+            this.done.TabIndex = 22;
+            // 
             // Profil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(880, 525);
+            this.Controls.Add(this.done);
             this.Controls.Add(this.comboBoxLiberProject);
             this.Controls.Add(this.Line);
             this.Controls.Add(this.buttonAdd);
@@ -288,8 +298,10 @@
             this.Controls.Add(this.Login1);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.labelName);
+            this.ForeColor = System.Drawing.Color.Linen;
             this.Name = "Profil";
             this.Text = " ";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Profil_FormClosed);
             this.Load += new System.EventHandler(this.Profil_Load);
             this.ResumeLayout(false);
@@ -319,5 +331,6 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label Line;
         private System.Windows.Forms.ComboBox comboBoxLiberProject;
+        private System.Windows.Forms.Label done;
     }
 }

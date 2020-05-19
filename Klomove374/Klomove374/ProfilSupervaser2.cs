@@ -15,6 +15,8 @@ namespace Klomove374
     {
         public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=contract_work.mdb;";
         private OleDbConnection myConnection;
+        public OleDbDataAdapter adapter;
+        public DataSet ds;
 
         public string login;
         public string Log
@@ -35,6 +37,8 @@ namespace Klomove374
 
         private void ProfilSupervaser2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "contract_workDataSet1.request". При необходимости она может быть перемещена или удалена.
+            //this.requestTableAdapter.Fill(this.contract_workDataSet1.request);
             labelLoginSuper.Text = Log;
 
 
@@ -112,28 +116,44 @@ namespace Klomove374
                    EndProject = maskedTextBoxendProject.Text,
                    description = textBoxDescriptionProject.Text;
 
+            if (StartProject !=" " && EndProject != " " && description != " ") {
 
+                // текст запроса
 
-            // текст запроса
+                string query = "INSERT INTO project (startProject, endProject, description) " +
+                    "VALUES('" + StartProject + "', '" + EndProject + "', '" + description + "')";
 
-            string query = "INSERT INTO project (startProject, endProject, description) " +
-                "VALUES('" + StartProject + "', '" + EndProject + "', '" + description + "')";
+                // создаем объект OleDbCommand для выполнения запроса к БД MS Access
+                OleDbCommand command = new OleDbCommand(query, myConnection);
 
-            // создаем объект OleDbCommand для выполнения запроса к БД MS Access
-            OleDbCommand command = new OleDbCommand(query, myConnection);
-
-            // выполняем запрос к MS Access
-            if (StartProject == " " || EndProject == " " || description == " " || StartProject == "" || EndProject == "" || description == "" )
-            {
-                labelNoInputProject.Text = "Вы заполнили не все поля";
-            }
-            else
-                command.ExecuteNonQuery();
+                // выполняем запрос к MS Access
+                if (StartProject == " " || EndProject == " " || description == " " || StartProject == "" || EndProject == "" || description == "")
+                {
+                    labelNoInputProject.Text = "Вы заполнили не все поля";
+                }
+                else
+                    command.ExecuteNonQuery();
                 maskedTextStartProject.Text = null;
                 maskedTextBoxendProject.Text = null;
                 textBoxDescriptionProject.Text = null;
 
-           
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Panel_redact newForm = new Panel_redact();
+            newForm.Show();
+        }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+            string query = "Select * From request";
+            adapter = new OleDbDataAdapter(query, myConnection);
+
+            ds = new DataSet();
+            adapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Klomove374
 
         public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=contract_work.mdb;";
         private OleDbConnection myConnection;
+        
 
         public string login;
         public string Log {
@@ -35,7 +36,7 @@ namespace Klomove374
 
 
         }
-
+        public int IDWorkers = new int();
         private void Profil_Load(object sender, EventArgs e)
         {
             labelLogin.Text = Log;
@@ -54,7 +55,7 @@ namespace Klomove374
 
             OleDbDataReader reader = command.ExecuteReader();
 
-            int IDWorkers = new int(); 
+            
             
             while (reader.Read())
             {
@@ -107,7 +108,7 @@ namespace Klomove374
                 }
 
             }
-
+            
             //string queryIDProject = "SELECT IDProject FROM [project-worker] WHERE IDProject = " + Convert.ToInt32(readerProject[0]) + "";
             string queryNambProject = "SELECT COUNT(*) FROM [project]";
             OleDbCommand commandNambProject = new OleDbCommand(queryNambProject, myConnection);
@@ -146,8 +147,48 @@ namespace Klomove374
         {
 
         }
-
         
+        private void comboBoxLiberProject_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            //string IDProjectSelect = " ";
+            //IDProjectSelect = Convert.ToString(comboBoxLiberProject.Text);
+            //label3.Text = IDProjectSelect;
+            
+
+
+            // текст запроса
+
+            string query = "INSERT INTO request ([IDWorker], desiredProject) " + "VALUES('" + IDWorkers + "', ' " +comboBoxLiberProject.Text+ " ')";
+
+            // создаем объект OleDbCommand для выполнения запроса к БД MS Access
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+
+            // выполняем запрос к MS Access
+            //if (name == " " || surname == " " || position == " " || phone == " " || login == " " || password == " " ||
+            //    name == "" || surname == "" || position == "" || phone == "" || login == "" || password == "")
+            //{
+                
+            //}
+            //else
+                command.ExecuteNonQuery();
+
+
+            done.Text = "Готово";
+
+        }
+        
+        private void comboBoxLiberProject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 
 

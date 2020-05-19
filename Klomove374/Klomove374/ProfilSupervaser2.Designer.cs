@@ -55,6 +55,10 @@
             this.maskedTextStartProject = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxendProject = new System.Windows.Forms.MaskedTextBox();
             this.labelNoInputProject = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Update_button = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Line
@@ -264,12 +268,13 @@
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(960, 505);
+            this.button1.Location = new System.Drawing.Point(1005, 663);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 77);
+            this.button1.Size = new System.Drawing.Size(219, 68);
             this.button1.TabIndex = 39;
-            this.button1.Text = "Редактировать табицу работников";
+            this.button1.Text = "Редактировать табицы";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -345,12 +350,49 @@
             this.labelNoInputProject.Size = new System.Drawing.Size(0, 30);
             this.labelNoInputProject.TabIndex = 48;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic UI Light", 19F);
+            this.label6.ForeColor = System.Drawing.Color.Linen;
+            this.label6.Location = new System.Drawing.Point(382, 313);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 36);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Новые заявки :";
+            // 
+            // Update_button
+            // 
+            this.Update_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Update_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Update_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Update_button.Font = new System.Drawing.Font("Yu Gothic UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Update_button.ForeColor = System.Drawing.Color.White;
+            this.Update_button.Location = new System.Drawing.Point(719, 364);
+            this.Update_button.Name = "Update_button";
+            this.Update_button.Size = new System.Drawing.Size(142, 26);
+            this.Update_button.TabIndex = 51;
+            this.Update_button.Text = "Обновить";
+            this.Update_button.UseVisualStyleBackColor = false;
+            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(369, 413);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(492, 318);
+            this.dataGridView1.TabIndex = 52;
+            // 
             // ProfilSupervaser2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1267, 651);
+            this.ClientSize = new System.Drawing.Size(1267, 760);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Update_button);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.labelNoInputProject);
             this.Controls.Add(this.maskedTextBoxendProject);
             this.Controls.Add(this.maskedTextStartProject);
@@ -382,6 +424,7 @@
             this.Name = "ProfilSupervaser2";
             this.Text = "ProfilSupervaser2";
             this.Load += new System.EventHandler(this.ProfilSupervaser2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,5 +459,8 @@
         private System.Windows.Forms.MaskedTextBox maskedTextStartProject;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxendProject;
         private System.Windows.Forms.Label labelNoInputProject;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button Update_button;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

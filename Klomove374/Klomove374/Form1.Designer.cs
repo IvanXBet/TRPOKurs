@@ -46,7 +46,7 @@
             this.buttonSingin.Name = "buttonSingin";
             this.buttonSingin.Size = new System.Drawing.Size(335, 42);
             this.buttonSingin.TabIndex = 0;
-            this.buttonSingin.Text = "Sing in";
+            this.buttonSingin.Text = "Войти";
             this.buttonSingin.UseVisualStyleBackColor = false;
             this.buttonSingin.Click += new System.EventHandler(this.buttonSingin_Click);
             // 
@@ -56,7 +56,7 @@
             this.login.BackColor = System.Drawing.Color.Linen;
             this.login.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.login.Location = new System.Drawing.Point(302, 137);
+            this.login.Location = new System.Drawing.Point(302, 141);
             this.login.Margin = new System.Windows.Forms.Padding(10);
             this.login.MaxLength = 20;
             this.login.Name = "login";
